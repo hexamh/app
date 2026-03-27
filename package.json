@@ -1,5 +1,5 @@
 {
-	"name": "my-react-app",
+	"name": "app",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -7,7 +7,7 @@
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"lint": "eslint .",
-		"preview": "npm run build && vite preview",
+		"preview": "npm run cf-typegen && npm run build && vite preview",
 		"deploy": "npm run build && wrangler deploy",
 		"cf-typegen": "wrangler types"
 	},

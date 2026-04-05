@@ -57,8 +57,6 @@ export function Dashboard() {
     value: w.hashrate,
   }));
 
-  const totalHashrateNum = onlineWorkers.reduce((s, w) => s + w.hashrate, 0);
-
   return (
     <div className="space-y-6">
       {/* Live status banner */}

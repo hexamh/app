@@ -168,7 +168,7 @@ export function Settings() {
             </div>
             <Slider
               value={payoutThreshold}
-              onValueChange={(v) => setPayoutThreshold(v)}
+              onValueChange={(v) => setPayoutThreshold(typeof v === 'number' ? [v] : [...v])}
               min={0.01}
               max={1}
               step={0.01}

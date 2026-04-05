@@ -81,7 +81,7 @@ function SidebarLink({
   if (collapsed) {
     return (
       <Tooltip>
-        <TooltipTrigger asChild>{link}</TooltipTrigger>
+        <TooltipTrigger render={link} />
         <TooltipContent side="right" sideOffset={8}>
           <div>
             <p className="font-medium">{item.label}</p>
@@ -209,7 +209,7 @@ export function Layout({ children }: { children: ReactNode }) {
   );
 
   return (
-    <TooltipProvider delayDuration={0}>
+    <TooltipProvider delay={0}>
       <div className="flex h-screen overflow-hidden">
         {/* Mobile overlay */}
         {mobileOpen && (
